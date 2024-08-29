@@ -31,9 +31,11 @@ const SignupForm = () => {
     }
 
     try {
+      console.log("Trying!")
       const response = await addUser({
         variables: {...userFormData}
       });
+      console.log("PASSED")
 
       if (!response.ok) {
         throw new Error('something went wrong!');
